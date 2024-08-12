@@ -1,0 +1,92 @@
+<template>
+  <div class="container">
+    <div class="leftContent">
+      <label for="searchInput" class="searchLabel"
+        ><img src="@/assets/icons/Search_icon.svg" alt="SearchIcon"
+      /></label>
+      <input type="text" placeholder="Search" id="searchInput" />
+    </div>
+    <div class="rightContent">
+      <TopBarItem v-for="path in imagesPaths" :key="path" :imageSrc="path" />
+      <button disabled class="profileIconButton">
+        <img src="@/assets/icons/Profile_icon.png" alt="Profile Icon" />
+      </button>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import TopBarItem from "@/components/TopBarItem.vue";
+
+const imagesPaths = [
+  "./src/assets/icons/Language_icon.svg",
+  "./src/assets/icons/Sun_icon.svg",
+  "./src/assets/icons/Apps_icon.svg",
+  "./src/assets/icons/Notification_icon.svg",
+];
+</script>
+
+<style scoped>
+.container {
+  width: 80%;
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px #000;
+  margin-top: 10px;
+}
+
+.leftContent {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: yellow;
+}
+
+.searchLabel {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.searchLabel img {
+  height: 30px;
+  width: 30px;
+}
+
+.rightContent {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+}
+
+.profileIconButton {
+  border: none;
+  height: 35px;
+  width: 40px;
+  background: none;
+}
+
+.profileIconButton img {
+  height: 100%;
+  width: 100%;
+}
+
+.profileIconButton:hover {
+  background: #f0f0f0;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+</style>
