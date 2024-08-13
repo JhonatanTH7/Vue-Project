@@ -39,7 +39,6 @@ const disabledButtonsInfo = [
   height: 100%;
   width: 80%;
   margin-top: 10px;
-  margin-bottom: 6px;
   border-radius: 5px;
   box-shadow: 0 0 2px 0 #000;
   overflow: hidden;

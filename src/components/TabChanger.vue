@@ -36,7 +36,8 @@ section {
   height: 30px;
   width: 80%;
   justify-content: start;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 button {
