@@ -9,7 +9,7 @@
     <div class="rightContent">
       <TopBarItem v-for="path in imagesPaths" :key="path" :imageSrc="path" />
       <button disabled class="profileIconButton">
-        <img src="@/assets/icons/Profile_icon.png" alt="Profile Icon" />
+        <img src="@/assets/icons/Profile_icon.jpg" alt="Profile Icon" />
       </button>
     </div>
   </div>
@@ -33,10 +33,8 @@ const imagesPaths = [
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px 2px #000;
+  box-shadow: 0 0 2px 0 #000;
   margin-top: 10px;
 }
 
@@ -46,18 +44,24 @@ const imagesPaths = [
   display: flex;
   align-items: center;
   gap: 8px;
-  background: yellow;
 }
 
 .searchLabel {
   height: 100%;
   display: flex;
   align-items: center;
+  margin-left: 20px;
 }
 
 .searchLabel img {
   height: 30px;
   width: 30px;
+}
+
+#searchInput {
+  height: 70%;
+  width: 50%;
+  border: none;
 }
 
 .rightContent {
@@ -74,11 +78,14 @@ const imagesPaths = [
   height: 35px;
   width: 40px;
   background: none;
+  margin-right: 20px;
 }
 
 .profileIconButton img {
   height: 100%;
   width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .profileIconButton:hover {

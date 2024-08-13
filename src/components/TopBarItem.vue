@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   imageSrc: string;
 }>();
 </script>
 
 <template>
   <button>
-    <img :src="props.imageSrc" alt="icon" />
+    <img :src="imageSrc" alt="icon" />
   </button>
 </template>
 
@@ -19,7 +19,7 @@ button {
 }
 
 button:hover {
-  background: #f0f0f0;
+  background: #e7e7e7;
 }
 
 img {
