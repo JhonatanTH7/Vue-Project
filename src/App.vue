@@ -20,14 +20,14 @@ const handleTabChange = (tab: string) => {
       <TabChanger @changeTab="handleTabChange" />
     </div>
   </header>
-  <body>
+  <main>
     <TabShower :tab="actualTab" />
-  </body>
+  </main>
 </template>
 
 <style scoped>
 header {
-  height: 50vh;
+  height: 45vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -43,8 +43,8 @@ header {
   align-items: center;
 }
 
-body {
-  height: 50vh;
+main {
+  height: 55vh;
   display: flex;
   justify-content: center;
   padding-bottom: 20px;

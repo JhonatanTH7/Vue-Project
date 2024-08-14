@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section class="container">
     <div class="leftContent">
       <label for="searchInput" class="searchLabel"
         ><img src="@/assets/icons/Search_icon.svg" alt="SearchIcon"
@@ -8,11 +8,11 @@
     </div>
     <div class="rightContent">
       <TopBarItem v-for="path in imagesPaths" :key="path" :imageSrc="path" />
-      <button disabled class="profileIconButton">
+      <button disabled class="profileIconButton hoverableNoBGButton">
         <img src="@/assets/icons/Profile_icon.jpg" alt="Profile Icon" />
       </button>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -74,10 +74,8 @@ const imagesPaths = [
 }
 
 .profileIconButton {
-  border: none;
   height: 35px;
   width: 40px;
-  background: none;
   margin-right: 20px;
 }
 
@@ -86,10 +84,6 @@ const imagesPaths = [
   width: 100%;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.profileIconButton:hover {
-  background: #f0f0f0;
 }
 
 input {

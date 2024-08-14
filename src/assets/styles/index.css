@@ -1,9 +1,19 @@
 body,
-header,
-footer {
-  margin: 0 !important;
-  padding: 0 !important;
+main {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box !important;
   height: 100vh;
   color: #808080;
+}
+
+.hoverableNoBGButton {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  color: #808080;
+}
+
+.hoverableNoBGButton:hover {
+  background: #e7e7e7;
 }

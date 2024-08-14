@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section class="container">
     <div class="topSection"></div>
     <div class="bottomSection">
       <div class="bottomLeftSection">
@@ -23,7 +23,7 @@
         Connected
       </button>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

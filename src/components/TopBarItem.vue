@@ -5,21 +5,15 @@ defineProps<{
 </script>
 
 <template>
-  <button>
+  <button class="hoverableNoBGButton">
     <img :src="imageSrc" alt="icon" />
   </button>
 </template>
 
 <style scoped>
 button {
-  border: none;
   height: 30px;
   width: 30px;
-  background: none;
-}
-
-button:hover {
-  background: #e7e7e7;
 }
 
 img {

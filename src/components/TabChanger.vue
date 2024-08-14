@@ -1,7 +1,10 @@
 <template>
   <section>
     <button
-      :class="{ buttonActive: tab.name === actualTab }"
+      :class="{
+        buttonActive: tab.name === actualTab,
+        hoverableNoBGButton: tab.name !== actualTab,
+      }"
       @click="changeTab(tab.name)"
       v-for="tab in tabs"
       :key="tab.name"
@@ -45,12 +48,8 @@ button {
   gap: 5px;
   align-items: center;
   height: 30px;
-  background: none;
-  border: none;
-  border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  color: #808080;
   font-weight: 600;
 }
 
@@ -58,11 +57,9 @@ button img {
   height: 15px;
 }
 
-button:hover {
-  background: #e7e7e7;
-}
-
 .buttonActive {
+  border: none;
+  border-radius: 5px;
   background: #7864ec;
   font-weight: 900;
   color: #fff;
