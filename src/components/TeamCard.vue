@@ -109,7 +109,6 @@ const getTechTextColor = (tech: string) => {
   height: 30%;
   display: flex;
   justify-content: space-between;
-  /* background-color: yellow; */
   margin: 0;
   padding: 0;
 }
@@ -144,7 +143,6 @@ const getTechTextColor = (tech: string) => {
 
 .middle {
   height: 40%;
-  /* background-color: blue; */
 }
 
 .middle p {
@@ -158,7 +156,6 @@ const getTechTextColor = (tech: string) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: red; */
 }
 
 .bottomRightSide {
