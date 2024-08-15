@@ -1,11 +1,11 @@
 <template>
   <div class="projectCard">
-    <div>
+    <div class="top">
       <button class="hoverableNoBGButton">
         <i class="bx bx-dots-vertical-rounded"></i>
       </button>
     </div>
-    <img src="" alt="User photo" />
+    <img src="" alt="User photo" class="userPhoto" />
     <div>
       <p>Nombre</p>
       <p>Cargo</p>
@@ -15,11 +15,11 @@
     </div>
     <div class="userInfo">Componente para los 3</div>
     <div class="connectionInfo">
-      <button class="bottomRightSectionButton">
+      <button class="purpleBGIconButton">
         <img src="@/assets/icons/VerifiedUser_icon.svg" alt="" />
         Connected
       </button>
-      <button>mensajeria</button>
+      <button class="mailButton"><i class="bx bx-envelope"></i></button>
     </div>
   </div>
 </template>
@@ -27,48 +27,61 @@
 <script setup lang="ts">
 import TechStack from "@/components/TechStack.vue";
 const techStack = ["Vue", "React", "Angular"];
+
+defineProps<{
+  name: string;
+  role: String;
+  photo: String;
+}>();
 </script>
 
 <style scoped>
 .projectCard {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 320px;
   height: 340px;
   border-radius: 5px;
   padding: 10px;
-  /* background: yellow; */
 }
 
-.projectCard img {
-  width: 50px;
-  height: 50px;
+.top {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.top button {
+  font-size: 20px;
+}
+
+.userPhoto {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-}
-
-.projectCard div {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.bottomRightSectionButton {
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.connectionInfo button {
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
+  background-color: aqua;
 }
 
 .techStack {
   display: flex;
+  gap: 10px;
+}
+
+.connectionInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.mailButton {
+  border: none;
   border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  font-size: 15px;
+  color: #808080;
 }
 </style>

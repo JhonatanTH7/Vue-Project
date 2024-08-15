@@ -6,11 +6,12 @@
         <img src="@/assets/icons/Profile_icon.jpg" alt="Profile Icon" />
         <section>
           <p class="userName">John Doe</p>
-          <div class="buttons">
+          <div class="buttonsContainer">
             <button
               v-for="button in disabledButtonsInfo"
               :key="button.name"
               disabled
+              class="buttons"
             >
               <img :src="button.image" alt="icon" />
               {{ button.name }}
@@ -18,7 +19,7 @@
           </div>
         </section>
       </div>
-      <button class="bottomRightSectionButton">
+      <button class="bottomRightSectionButton purpleBGIconButton">
         <img src="@/assets/icons/VerifiedUser_icon.svg" alt="" />
         Connected
       </button>
@@ -83,25 +84,16 @@ const disabledButtonsInfo = [
   margin: 0;
 }
 
-.buttons {
+.buttonsContainer {
   display: flex;
 }
 
 .bottomRightSectionButton {
   margin-right: 20px;
-  background: #7864ec;
-  font-weight: 900;
-  color: #fff;
   margin-bottom: 10px;
-  padding-left: 10px;
 }
 
-.bottomRightSectionButton:hover {
-  background: #7864ec;
-  box-shadow: 0 0 5px #7864ec;
-}
-
-button {
+.buttons {
   display: flex;
   gap: 5px;
   align-items: center;
@@ -114,7 +106,7 @@ button {
   font-weight: 600;
 }
 
-button img {
+.buttons img {
   height: 15px !important;
 }
 </style>

@@ -2,7 +2,7 @@
   <section>
     <button
       :class="{
-        buttonActive: tab.name === actualTab,
+        purpleBGIconButton: tab.name === actualTab,
         hoverableNoBGButton: tab.name !== actualTab,
       }"
       @click="changeTab(tab.name)"
@@ -44,10 +44,6 @@ section {
 }
 
 button {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  height: 30px;
   padding-left: 10px;
   padding-right: 10px;
   font-weight: 600;
@@ -55,18 +51,5 @@ button {
 
 button img {
   height: 15px;
-}
-
-.buttonActive {
-  border: none;
-  border-radius: 5px;
-  background: #7864ec;
-  font-weight: 900;
-  color: #fff;
-}
-
-.buttonActive:hover {
-  background: #7864ec;
-  box-shadow: 0 0 5px #7864ec;
 }
 </style>

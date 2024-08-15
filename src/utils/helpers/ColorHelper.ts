@@ -6,6 +6,8 @@ export const getTechBGColor = (tech: string) => {
       return "#c0e6ff";
     case "Vuejs":
       return "#a8f2d1";
+    case "Vue":
+      return "#a8f2d1";
     case "Developer":
       return "#f4bbbb";
     case "Hubilo":
@@ -18,6 +20,8 @@ export const getTechBGColor = (tech: string) => {
       return "#ffcebc";
     case "CSS":
       return "#b7f7f7";
+    case "Angular":
+      return "#f4bbbb";
     default:
       return "#000";
   }
@@ -31,6 +35,8 @@ export const getTechTextColor = (tech: string) => {
       return "#40a9ee";
     case "Vuejs":
       return "#0b9154";
+    case "Vue":
+      return "#0b9154";
     case "Developer":
       return "#ff0000";
     case "Hubilo":
@@ -43,6 +49,8 @@ export const getTechTextColor = (tech: string) => {
       return "#e45d2b";
     case "CSS":
       return "#047575";
+    case "Angular":
+      return "#ff0000";
     default:
       return "#fff";
   }

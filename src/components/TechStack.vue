@@ -20,6 +20,7 @@ defineProps<{
 
 <style scoped>
 .tech {
+  width: fit-content;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 10px;
