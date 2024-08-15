@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import TeamCard from "./TeamCard.vue";
+import TeamCard from "@/components/team/TeamCard.vue";
 const cardsTeams = [
   {
     title: "React Developers",
@@ -60,8 +60,10 @@ const cardsTeams = [
 
 <style scoped>
 .container {
-  height: 100%;
+  max-height: 100%;
+  height: min-content;
   width: 80%;
+  padding: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

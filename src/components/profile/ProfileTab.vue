@@ -10,6 +10,5 @@
 .container {
   height: 100%;
   width: 80%;
-  background: black;
 }
 </style>

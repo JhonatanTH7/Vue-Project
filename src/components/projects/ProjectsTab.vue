@@ -4,12 +4,17 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+</script>
 
 <style scoped>
 .container {
-  height: 100%;
+  height: min-content;
+  max-height: 100%;
   width: 80%;
-  background: purple;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 </style>

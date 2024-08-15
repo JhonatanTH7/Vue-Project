@@ -9,10 +9,10 @@
 defineProps<{
   tab: string;
 }>();
-import ProfileTab from "./ProfileTab.vue";
-import TeamTab from "./TeamTab.vue";
-import ProjectsTab from "./ProjectsTab.vue";
-import ConnectionsTab from "./ConnectionsTab.vue";
+import ProfileTab from "@/components/profile/ProfileTab.vue";
+import TeamTab from "@/components/team/TeamTab.vue";
+import ProjectsTab from "@/components/projects/ProjectsTab.vue";
+import ConnectionsTab from "@/components/connections/ConnectionsTab.vue";
 </script>
 
 <style scoped></style>
