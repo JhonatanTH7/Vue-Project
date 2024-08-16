@@ -28,7 +28,6 @@
 import "boxicons/css/boxicons.min.css";
 import TechStack from "@/components/TechStack.vue";
 import ProfileCarousel from "@/components/team/ProfileCarousel.vue";
-import { getTechBGColor, getTechTextColor } from "@/utils/helpers/ColorHelper";
 
 defineProps<{
   title: string;
@@ -50,7 +49,7 @@ const profiles = [
   height: 138px;
   width: 320px;
   padding: 10px;
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 1px 1px 10px #937f7f;
 }
 

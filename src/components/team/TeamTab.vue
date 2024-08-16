@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="scrollableCardsContainer">
     <TeamCard
       v-for="team in cardsTeams"
       :title="team.title"
@@ -58,18 +58,4 @@ const cardsTeams = [
 ];
 </script>
 
-<style scoped>
-.container {
-  max-height: 100%;
-  height: min-content;
-  width: 80%;
-  padding: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #7864ec #f5f5f5;
-}
-</style>
+<style scoped></style>
