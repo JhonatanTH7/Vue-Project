@@ -32,7 +32,15 @@
         <p><strong>All Hours:</strong> {{ totalHours }}/{{ hours }}</p>
         <p class="projectDeadlineWarning">{{ daysLeft }} Days left</p>
       </div>
-      <ProgressBar :progress="tasksCompleted" :max="totalTasks" />
+      <div class="progressBarHeader">
+        <span>Task: {{ tasksCompleted }}/{{ totalTasks }}</span>
+        <span>{{ percentage.value }}% Completed</span>
+      </div>
+      <ProgressBar
+        @getPercentage="handleGetPercentage"
+        :progress="tasksCompleted"
+        :max="totalTasks"
+      />
     </div>
 
     <div class="projectFooter">
@@ -44,8 +52,16 @@
 </template>
 
 <script lang="ts" setup>
-import ProgressBar from "@/components/projects/ProgressBar.vue";
-import ProfileCarousel from "@/components/team/ProfileCarousel.vue";
+import { ref } from "vue";
+
+import ProgressBar from "@/components/ProgressBar.vue";
+import ProfileCarousel from "@/components/ProfileCarousel.vue";
+
+const percentage: number = ref(0);
+
+const handleGetPercentage = (value: number) => {
+  percentage.value = value;
+};
 
 defineProps<{
   imageSrc: string;
@@ -68,6 +84,15 @@ defineProps<{
 </script>
 
 <style scoped>
+.progressBarHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  color: #8c8c8c;
+  margin-bottom: 5px;
+}
+
 .projectCard {
   width: 300px;
   padding: 20px;

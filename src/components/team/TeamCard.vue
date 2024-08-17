@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import "boxicons/css/boxicons.min.css";
 import TechStack from "@/components/TechStack.vue";
-import ProfileCarousel from "@/components/team/ProfileCarousel.vue";
+import ProfileCarousel from "@/components/ProfileCarousel.vue";
 
 defineProps<{
   title: string;
