@@ -14,6 +14,8 @@ defineProps<{
 button {
   height: 30px;
   width: 30px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 img {

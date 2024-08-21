@@ -1,5 +1,5 @@
 <template>
-  <div class="projectCard">
+  <div class="connectionCard">
     <div class="top">
       <button class="hoverableNoBGButton">
         <i class="bx bx-dots-vertical-rounded"></i>
@@ -58,18 +58,18 @@ defineProps<{
 </script>
 
 <style scoped>
-.projectCard {
+.connectionCard {
   width: 320px;
   height: 305px;
   display: flex;
   gap: 12px;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  padding-top: 10px;
-  /* padding-bottom: 20px; */
-  box-shadow: 1px 1px 10px #937f7f;
+  padding: 10px;
+  box-shadow: 1px 1px 10px var(--boxShadow);
+  background-color: var(--primary);
 }
 
 .top {
@@ -128,7 +128,6 @@ defineProps<{
   font-size: small;
 }
 
-p,
 h3 {
   margin: 0;
   text-align: center;

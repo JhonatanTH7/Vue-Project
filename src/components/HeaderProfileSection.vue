@@ -41,8 +41,9 @@ const disabledButtonsInfo = [
   width: 80%;
   margin-top: 10px;
   border-radius: 5px;
-  box-shadow: 0 0 2px 0 #000;
+  box-shadow: 1px 1px 10px var(--boxShadow);
   overflow: hidden;
+  background-color: var(--primary);
 }
 
 .topSection {

@@ -1,9 +1,9 @@
 <template>
   <div class="projectCard">
     <div class="projectHeader">
-      <img :src="imageSrc" alt="Project Logo" class="projectLogo" />
+      <img :src="icon" alt="Project Logo" class="projectLogo" />
       <div class="projectInfo">
-        <h3 class="projectTitle">{{ title }}</h3>
+        <h3 class="projectTitle">{{ name }}</h3>
         <p class="projectClient">Client: {{ client }}</p>
       </div>
       <button class="projectMenu hoverableNoBGButton">
@@ -34,7 +34,7 @@
       </div>
       <div class="progressBarHeader">
         <span>Task: {{ tasksCompleted }}/{{ totalTasks }}</span>
-        <span>{{ percentage.value }}% Completed</span>
+        <span>{{ percentage }}% Completed</span>
       </div>
       <ProgressBar
         @getPercentage="handleGetPercentage"
@@ -44,8 +44,8 @@
     </div>
 
     <div class="projectFooter">
-      <ProfileCarousel :profiles="profiles.slice(0, 4)" />
-      <p class="projectMembers">{{ members }} members</p>
+      <ProfileCarousel :profiles="team.members.slice(0, 4)" />
+      <p class="projectMembers">{{ team.members.length }} members</p>
       <div><i class="iconChat bx bx-message-dots"></i>{{ chatMessages }}</div>
     </div>
   </div>
@@ -56,50 +56,25 @@ import { ref } from "vue";
 
 import ProgressBar from "@/components/ProgressBar.vue";
 import ProfileCarousel from "@/components/ProfileCarousel.vue";
+import type { Project } from "@/utils/data/Data";
 
-const percentage: number = ref(0);
+const percentage = ref(0);
 
 const handleGetPercentage = (value: number) => {
   percentage.value = value;
 };
 
-defineProps<{
-  imageSrc: string;
-  title: string;
-  client: string;
-  budget: number;
-  totalBudget: number;
-  startDate: string;
-  deadline: string;
-  description: string;
-  totalHours: number;
-  hours: number;
-  daysLeft: number;
-  members: number;
-  chatMessages: number;
-  tasksCompleted: number;
-  totalTasks: number;
-  profiles: { name: string; image: string }[];
-}>();
+defineProps<Project>();
 </script>
 
 <style scoped>
-.progressBarHeader {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 14px;
-  color: #8c8c8c;
-  margin-bottom: 5px;
-}
-
 .projectCard {
+  height: 309px;
   width: 300px;
   padding: 20px;
-  background: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 5px 0;
-  font-family: "Arial", sans-serif;
+  box-shadow: 1px 1px 10px var(--boxShadow);
+  background-color: var(--primary);
 }
 
 .projectHeader {
@@ -165,6 +140,7 @@ defineProps<{
 }
 
 .projectDescription {
+  height: 70px;
   font-size: 14px;
   color: #666;
   margin: 10px 0;
@@ -172,6 +148,16 @@ defineProps<{
 
 .projectProgress {
   margin: 10px 0;
+}
+
+.progressBarHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  color: #8c8c8c;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .projectTiming {

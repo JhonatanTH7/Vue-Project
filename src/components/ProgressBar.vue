@@ -31,7 +31,7 @@ emit("getPercentage", percentage);
 
 .progressFill {
   height: 100%;
-  background-color: #8a63f6;
+  background-color: var(--purple);
   border-radius: 5px;
   transition: width 0.5s ease;
 }

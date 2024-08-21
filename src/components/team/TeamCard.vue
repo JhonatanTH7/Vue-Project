@@ -2,8 +2,8 @@
   <div class="card">
     <div class="top">
       <div class="topLeftSide">
-        <img :src="imageSrc" alt="icon" />
-        <h4>{{ title }}</h4>
+        <img :src="icon" alt="icon" />
+        <h4>{{ name }}</h4>
       </div>
       <div class="topRightSide">
         <button class="hoverableNoBGButton"><i class="bx bx-star"></i></button>
@@ -16,9 +16,9 @@
       <p>{{ description }}</p>
     </div>
     <div class="bottom">
-      <ProfileCarousel :profiles="profiles" />
+      <ProfileCarousel :profiles="members.slice(0,4)" />
       <div class="bottomRightSide">
-        <TechStack v-for="tech in techStack" :key="tech" :tech="tech" />
+        <TechStack v-for="label in techLabels" :key="label" :tech="label" />
       </div>
     </div>
   </div>
@@ -28,20 +28,9 @@
 import "boxicons/css/boxicons.min.css";
 import TechStack from "@/components/TechStack.vue";
 import ProfileCarousel from "@/components/ProfileCarousel.vue";
+import type { Team } from "@/utils/data/Data";
 
-defineProps<{
-  title: string;
-  description: string;
-  imageSrc: string;
-  techStack: Array<string>;
-}>();
-
-const profiles = [
-  { name: "John Doe", image: "./src/assets/icons/Profile_icon.jpg" },
-  { name: "Jane Smith", image: "./src/assets/icons/Profile_icon.jpg" },
-  { name: "Mike Ross", image: "./src/assets/icons/Profile_icon.jpg" },
-  { name: "Anna Taylor", image: "./src/assets/icons/Profile_icon.jpg" },
-];
+defineProps<Team>();
 </script>
 
 <style scoped>
@@ -50,7 +39,8 @@ const profiles = [
   width: 320px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 1px 1px 10px #937f7f;
+  box-shadow: 1px 1px 10px var(--boxShadow);
+  background-color: #ffffff;
 }
 
 .top {
@@ -85,14 +75,9 @@ const profiles = [
   }
 }
 
-.middle {
-  height: 57px;
-  padding-top: 5px;
-  p {
-    max-height: 47px;
-    margin: 0;
-    font-size: small;
-  }
+.middle p {
+  max-height: 47px;
+  font-size: small;
 }
 
 .bottom {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TopBar from "@/components/TopBar.vue";
+import TopBar from "@/components/topBar/TopBar.vue";
 import "/src/assets/styles/index.css";
 import TabChanger from "@/components/TabChanger.vue";
 import TabShower from "@/components/TabShower.vue";
@@ -47,6 +47,5 @@ main {
   height: 55vh;
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
 }
 </style>

@@ -6,17 +6,16 @@
       class="profile"
       :style="'transform: translateX(calc(' + index + ' * 60%))'"
     >
-      <img :src="profile.image" :alt="profile.name" />
+      <img :src="profile.icon" :alt="profile.name" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 defineProps<{
-  profiles: Array<{ name: string; image: string }>;
+  profiles: { name: string; icon: string }[];
 }>();
 </script>
-
 <style scoped>
 .profileCarousel {
   position: relative;
@@ -32,7 +31,7 @@ defineProps<{
   border-radius: 50%;
   overflow: hidden;
   background: blue;
-  border: 2px solid white;
+  border: 2px solid #ffffff;
   img {
     width: 100%;
     height: 100%;

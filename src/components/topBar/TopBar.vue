@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import TopBarItem from "@/components/TopBarItem.vue";
+import TopBarItem from "@/components/topBar/TopBarItem.vue";
 
 const imagesPaths = [
   "./src/assets/icons/Language_icon.svg",
@@ -34,8 +34,9 @@ const imagesPaths = [
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  box-shadow: 0 0 2px 0 #000;
+  box-shadow: 1px 1px 10px var(--boxShadow);
   margin-top: 10px;
+  background-color: var(--primary);
 }
 
 .leftContent {
@@ -62,6 +63,8 @@ const imagesPaths = [
   height: 70%;
   width: 50%;
   border: none;
+  border-radius: 5px;
+  padding-left: 10px;
 }
 
 .rightContent {
@@ -84,10 +87,5 @@ const imagesPaths = [
   width: 100%;
   border-radius: 50%;
   object-fit: cover;
-}
-
-input {
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
 }
 </style>
