@@ -16,7 +16,7 @@
       <p>{{ description }}</p>
     </div>
     <div class="bottom">
-      <ProfileCarousel :profiles="members.slice(0,4)" />
+      <ProfileCarousel :profiles="members.slice(0, 4)" />
       <div class="bottomRightSide">
         <TechStack v-for="label in techLabels" :key="label" :tech="label" />
       </div>
@@ -28,7 +28,7 @@
 import "boxicons/css/boxicons.min.css";
 import TechStack from "@/components/TechStack.vue";
 import ProfileCarousel from "@/components/ProfileCarousel.vue";
-import type { Team } from "@/utils/data/Data";
+import type { Team } from "@/utils/types/Types";
 
 defineProps<Team>();
 </script>

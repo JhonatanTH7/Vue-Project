@@ -56,7 +56,7 @@ import { ref } from "vue";
 
 import ProgressBar from "@/components/ProgressBar.vue";
 import ProfileCarousel from "@/components/ProfileCarousel.vue";
-import type { Project } from "@/utils/data/Data";
+import type { Project } from "@/utils/types/Types";
 
 const percentage = ref(0);
 

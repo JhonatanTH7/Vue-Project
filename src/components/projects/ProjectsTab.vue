@@ -13,7 +13,6 @@
       :description="project.description"
       :icon="project.icon"
       :type="project.type"
-      :leader="project.leader"
       :tasksCompleted="project.tasksCompleted"
       :totalTasks="project.totalTasks"
       :totalHours="project.totalHours"
