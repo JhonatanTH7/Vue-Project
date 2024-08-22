@@ -3,18 +3,25 @@
   --gray: #808080;
   --purple: #7864ec;
   --boxShadow: #937f7f59;
+  --background: #f9f6f6;
+}
+
+html {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--purple) var(--background);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box !important;
-  color: #808080;
+  color: var(--gray);
 }
 
-html {
+body {
   height: 100vh;
-  background-color: #f9f6f6;
+  background-color: var(--background);
 }
 
 .hoverableNoBGButton,

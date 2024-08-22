@@ -1,13 +1,15 @@
 <template>
-  <div class="container"></div>
+  <div class="sideProfileDetailsContainer"></div>
 </template>
 
 <script setup lang="ts"></script>
 
 <style scoped>
-.container {
-  height: 100px;
+.sideProfileDetailsContainer {
+  height: 400px;
   width: 100%;
-  background-color: blueviolet;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px var(--boxShadow);
+  background-color: var(--primary);
 }
 </style>

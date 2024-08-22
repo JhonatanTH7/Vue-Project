@@ -53,7 +53,7 @@
             <div class="entriesPagination">
               <button><i class="bx bxs-chevrons-left"></i></button>
               <button><i class="bx bxs-chevron-left"></i></button>
-              <button>1</button>
+              <button class="purpleBGIconButton">1</button>
               <button>2</button>
               <button><i class="bx bxs-chevron-right"></i></button>
               <button><i class="bx bxs-chevrons-right"></i></button>
@@ -67,7 +67,7 @@
 
 <script setup lang="ts">
 import ProjectTableItem from "@/components/profile/projectTable/ProjecTableItem.vue";
-import type { Project } from "@/utils/data/Data";
+import type { Project } from "@/utils/types/Types";
 defineProps<{
   projects: Project[];
 }>();
@@ -75,6 +75,7 @@ defineProps<{
 
 <style scoped>
 table {
+  height: 300px;
   width: 100%;
   border: none;
   border-radius: 5px;
@@ -123,6 +124,5 @@ tr {
   height: 20px;
   width: 20px;
   font-size: 10px;
-  color: #808080;
 }
 </style>

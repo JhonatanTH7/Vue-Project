@@ -27,19 +27,32 @@ import { projects } from "@/utils/data/Data";
 
 <style scoped>
 section {
-  width: 80%;
-  width: 80%;
   display: flex;
+  height: min-content;
+  width: 80%;
   gap: 20px;
+  padding-bottom: 10px;
 }
 
 .leftSide {
   width: 40%;
-  background-color: blueviolet;
+}
+
+.leftSide,
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .rightSide {
   width: 60%;
-  background-color: blue;
+}
+
+.middleRightSection {
+  height: 260px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
 }
 </style>

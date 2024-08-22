@@ -41,7 +41,7 @@ const imagesPaths = [
 
 .leftContent {
   height: 100%;
-  width: 70%;
+  width: 50%;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -69,7 +69,7 @@ const imagesPaths = [
 
 .rightContent {
   height: 100%;
-  width: 30%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: end;
