@@ -34,9 +34,15 @@
       </div>
     </div>
     <div class="connectionInfo">
-      <button class="purpleBGIconButton">
-        <img src="@/assets/icons/VerifiedUser_icon.svg" alt="icon" />
-        Connected
+      <button
+        :class="
+          connectionStatus ? 'purpleBGIconButton' : 'hoverableBGBIconButton'
+        "
+      >
+        <i
+          :class="connectionStatus ? 'bx bx-user-check' : 'bx bx-user-plus'"
+        ></i>
+        {{ connectionStatus ? "Connected" : "Connect" }}
       </button>
       <button class="mailButton"><i class="bx bx-envelope"></i></button>
     </div>

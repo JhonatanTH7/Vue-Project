@@ -13,14 +13,14 @@
               disabled
               class="buttons"
             >
-              <img :src="button.image" alt="icon" />
+              <i :class="button.classBoxIcon"></i>
               {{ button.name }}
             </button>
           </div>
         </section>
       </div>
       <button class="bottomRightSectionButton purpleBGIconButton">
-        <img src="@/assets/icons/VerifiedUser_icon.svg" alt="" />
+        <i class="bx bx-user-check"></i>
         Connected
       </button>
     </div>
@@ -29,9 +29,12 @@
 
 <script setup lang="ts">
 const disabledButtonsInfo = [
-  { name: "Coder", image: "./src/assets/icons/Palette_icon.svg" },
-  { name: "Medellin", image: "./src/assets/icons/Location_icon.svg" },
-  { name: "Joined April 2021", image: "./src/assets/icons/Calendar_icon.svg" },
+  { name: "Coder", classBoxIcon: "bx bx-palette" },
+  { name: "Medellin", classBoxIcon: "bx bx-map" },
+  {
+    name: "Joined April 2021",
+    classBoxIcon: "bx bx-calendar",
+  },
 ];
 </script>
 

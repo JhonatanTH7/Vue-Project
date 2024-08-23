@@ -9,7 +9,7 @@
       v-for="tab in tabs"
       :key="tab.name"
     >
-      <img :src="tab.image" alt="icon" />
+      <i :class="tab.classBoxIcons"></i>
       {{ tab.name }}
     </button>
   </section>
@@ -25,10 +25,10 @@ const changeTab = (tab: string) => {
   actualTab.value = tab;
 };
 const tabs = [
-  { name: "Profile", image: "./src/assets/icons/VerifiedUser_icon.svg" },
-  { name: "Team", image: "./src/assets/icons/Team_icon.svg" },
-  { name: "Projects", image: "./src/assets/icons/Projects_icon.svg" },
-  { name: "Connections", image: "./src/assets/icons/Connections_icon.svg" },
+  { name: "Profile", classBoxIcons: "bx bx-user-check" },
+  { name: "Team", classBoxIcons: "bx bx-group" },
+  { name: "Projects", classBoxIcons: "bx bx-category" },
+  { name: "Connections", classBoxIcons: "bx bx-link-alt" },
 ];
 </script>
 
@@ -49,7 +49,7 @@ button {
   font-weight: 600;
 }
 
-button img {
-  height: 15px;
+.hoverableNoBGButton i {
+  font-size: 15px;
 }
 </style>
