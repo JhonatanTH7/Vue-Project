@@ -17,7 +17,7 @@
         <th>LEADER</th>
         <th>TEAM</th>
         <th>PROGRESS</th>
-        <th>ACTION</th>
+        <th style="text-align: center">ACTION</th>
       </tr>
     </thead>
     <tbody>
@@ -103,6 +103,10 @@ tr {
   border-bottom: 1px solid #eae8e8;
 }
 
+th {
+  text-align: start;
+}
+
 td:first-child,
 th:first-child {
   padding-left: 20px;
@@ -118,7 +122,6 @@ th:last-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin: 8px 20px 8px 20px; */
   margin-top: 8px;
   margin-bottom: 8px;
 }

@@ -27,3 +27,15 @@ export interface Team {
   leader: { name: string; icon: string };
   members: { name: string; icon: string }[];
 }
+
+export interface Connection {
+  id: number;
+  name: string;
+  icon: string;
+  position: string;
+  tasks: number;
+  projects: number;
+  connectionsNumber: number;
+  connectionStatus: boolean;
+  techLabels: string[];
+}

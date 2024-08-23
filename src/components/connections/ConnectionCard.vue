@@ -5,37 +5,37 @@
         <i class="bx bx-dots-vertical-rounded"></i>
       </button>
     </div>
-    <img :src="imageSrc" alt="User photo" class="userPhoto" />
+    <img :src="icon" alt="User photo" class="userPhoto" />
     <div>
       <h3>{{ name }}</h3>
       <p class="position">{{ position }}</p>
     </div>
     <div class="techStack">
-      <TechStack v-for="tech in techStack" :key="tech" :tech="tech" />
+      <TechStack v-for="tech in techLabels" :key="tech" :tech="tech" />
     </div>
     <div class="userInfo">
       <div class="info">
         <strong>
-          {{ numberOfProjects }}
+          {{ projects }}
         </strong>
         <p>Projects</p>
       </div>
       <div class="info">
         <strong>
-          {{ numberOfTasks }}
+          {{ tasks }}
         </strong>
         <p>Tasks</p>
       </div>
       <div class="info">
         <strong>
-          {{ numberOfConnections }}
+          {{ connectionsNumber }}
         </strong>
         <p>Connections</p>
       </div>
     </div>
     <div class="connectionInfo">
       <button class="purpleBGIconButton">
-        <img src="@/assets/icons/VerifiedUser_icon.svg" alt="" />
+        <img src="@/assets/icons/VerifiedUser_icon.svg" alt="icon" />
         Connected
       </button>
       <button class="mailButton"><i class="bx bx-envelope"></i></button>
@@ -45,16 +45,9 @@
 
 <script setup lang="ts">
 import TechStack from "@/components/TechStack.vue";
+import type { Connection } from "@/utils/types/Types";
 
-defineProps<{
-  name: string;
-  position: string;
-  imageSrc: string;
-  numberOfConnections: number;
-  numberOfProjects: number;
-  numberOfTasks: number;
-  techStack: string[];
-}>();
+defineProps<Connection>();
 </script>
 
 <style scoped>
@@ -86,7 +79,6 @@ defineProps<{
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: aqua;
 }
 
 .techStack {
@@ -125,6 +117,7 @@ defineProps<{
 
 .position {
   font-size: small;
+  text-align: center;
 }
 
 h3 {

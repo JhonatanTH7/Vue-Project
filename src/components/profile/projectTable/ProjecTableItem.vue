@@ -1,10 +1,10 @@
 <template>
   <tr>
-    <td class="centerTd">
+    <td>
       <input type="checkbox" />
     </td>
     <td>
-      <div class="project-name">
+      <div class="projectName">
         <img :src="icon" alt="Project Icon" />
         <div>
           <h4>{{ name }}</h4>
@@ -12,7 +12,7 @@
         </div>
       </div>
     </td>
-    <td class="centerTd">
+    <td>
       <p>{{ team.leader.name }}</p>
     </td>
     <td>
@@ -24,7 +24,7 @@
         <p>{{ tasksCompleted }} %</p>
       </div>
     </td>
-    <td class="centerTd">
+    <td class="center">
       <button class="hoverableNoBGButton">
         <i class="bx bx-dots-vertical-rounded"></i>
       </button>
@@ -41,23 +41,17 @@ defineProps<Project>();
 </script>
 
 <style scoped>
-.project-name {
+.projectName {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 10px;
 }
 
-.project-name img {
+.projectName img {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-}
-
-.centerTd {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .projectProgress {
@@ -69,6 +63,11 @@ defineProps<Project>();
 
 .projectProgress p {
   white-space: nowrap;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 td {
