@@ -3,7 +3,9 @@
     <div class="topSection"></div>
     <div class="bottomSection">
       <div class="bottomLeftSection">
-        <img src="@/assets/icons/Profile_icon.jpg" alt="Profile Icon" />
+        <div class="profileAvatar">
+          <img src="@/assets/icons/Profile_icon.jpg" alt="Profile Icon" />
+        </div>
         <section>
           <p class="userName">John Doe</p>
           <div class="buttonsContainer">
@@ -19,7 +21,7 @@
           </div>
         </section>
       </div>
-      <button class="bottomRightSectionButton purpleBGIconButton">
+      <button class="purpleBGIconButton">
         <i class="bx bx-user-check"></i>
         Connected
       </button>
@@ -45,12 +47,12 @@ const disabledButtonsInfo = [
   margin-top: 10px;
   border-radius: 5px;
   box-shadow: 1px 1px 10px var(--boxShadow);
-  overflow: hidden;
   background-color: var(--primary);
 }
 
 .topSection {
   height: 60%;
+  border-radius: 5px 5px 0 0;
   background: rgb(255, 1, 202);
   background: linear-gradient(
     120deg,
@@ -62,22 +64,31 @@ const disabledButtonsInfo = [
 
 .bottomSection {
   height: 40%;
+  max-height: 40%;
   display: flex;
   align-items: end;
   justify-content: space-between;
+  padding: 0 25px 25px 25px;
 }
 
 .bottomLeftSection {
+  height: 100%;
+  width: 70%;
   display: flex;
   align-items: end;
   gap: 30px;
-  width: 70%;
-  margin-left: 20px;
-  margin-bottom: 10px;
 }
 
-.bottomLeftSection img {
-  height: 100px;
+.profileAvatar {
+  position: relative;
+  height: 120%;
+  aspect-ratio: 1.1 / 1;
+}
+
+.profileAvatar img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
   box-shadow: 0 0 0 5px #fff;
   border-radius: 5px;
 }
@@ -90,11 +101,6 @@ const disabledButtonsInfo = [
 
 .buttonsContainer {
   display: flex;
-}
-
-.bottomRightSectionButton {
-  margin-right: 20px;
-  margin-bottom: 10px;
 }
 
 .buttons {

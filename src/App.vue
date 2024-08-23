@@ -31,7 +31,6 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .headerBottomSection {
@@ -39,7 +38,6 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
   align-items: center;
 }
 
