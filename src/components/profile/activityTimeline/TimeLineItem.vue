@@ -66,6 +66,6 @@ time.value = props.timePassed;
   gap: 5px;
   margin-left: 4px;
   padding: 0px 0px 10px 26px;
-  border-left: 1px solid #f0f0f0;
+  border-left: 1px solid #bfbdbd;
 }
 </style>
