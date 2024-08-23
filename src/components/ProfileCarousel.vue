@@ -1,13 +1,13 @@
 <template>
   <div class="profileCarousel">
-    <div
+    <img
+      :src="profile.icon"
+      :alt="profile.name"
       v-for="(profile, index) in profiles"
       :key="index"
       class="profile"
       :style="'transform: translateX(calc(' + index + ' * 60%))'"
-    >
-      <img :src="profile.icon" :alt="profile.name" />
-    </div>
+    />
   </div>
 </template>
 
@@ -21,7 +21,7 @@ defineProps<{
   position: relative;
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 25px;
 }
 
 .profile {
@@ -29,8 +29,6 @@ defineProps<{
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  overflow: hidden;
-  background: blue;
   border: 2px solid #ffffff;
   img {
     width: 100%;

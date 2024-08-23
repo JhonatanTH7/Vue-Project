@@ -121,7 +121,6 @@ defineProps<{
   height: 30px;
   width: 30px;
   font-size: 15px;
-  color: #808080;
 }
 
 .position {

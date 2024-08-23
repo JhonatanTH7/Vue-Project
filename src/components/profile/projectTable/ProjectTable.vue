@@ -1,7 +1,7 @@
 <template>
   <table>
     <thead>
-      <tr class="theadTr">
+      <tr>
         <th colspan="6">
           <div class="tableHeader">
             <h2>Projects List</h2>
@@ -80,8 +80,6 @@ table {
   border: none;
   border-radius: 5px;
   box-shadow: 1px 1px 10px var(--boxShadow);
-  padding: 10px;
-  font-size: 10px;
   background-color: var(--primary);
   border-collapse: collapse;
 }
@@ -90,7 +88,8 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 15px 20px 15px;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 
 .tableHeader input {
@@ -104,11 +103,24 @@ tr {
   border-bottom: 1px solid #eae8e8;
 }
 
+td:first-child,
+th:first-child {
+  padding-left: 20px;
+  width: min-content;
+}
+
+td:last-child,
+th:last-child {
+  padding-right: 20px;
+}
+
 .tableFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 8px 15px 8px 15px;
+  /* margin: 8px 20px 8px 20px; */
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .entriesPagination {

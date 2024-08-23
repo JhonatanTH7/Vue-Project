@@ -32,6 +32,7 @@ section {
   width: 80%;
   gap: 20px;
   padding-bottom: 10px;
+  font-size: 12px;
 }
 
 .leftSide {

@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "boxicons": "^2.1.4",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-project": "file:"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",

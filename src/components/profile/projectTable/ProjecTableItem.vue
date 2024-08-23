@@ -64,6 +64,7 @@ defineProps<Project>();
   display: flex;
   align-items: center;
   gap: 5px;
+  padding-left: 5px;
 }
 
 .projectProgress p {
@@ -72,5 +73,13 @@ defineProps<Project>();
 
 td {
   overflow: hidden;
+}
+
+td:first-child {
+  padding-left: 20px;
+}
+
+td:last-child {
+  padding-right: 20px;
 }
 </style>
