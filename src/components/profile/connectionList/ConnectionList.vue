@@ -1,10 +1,20 @@
 <template>
   <div class="connectionListContainer">
     <h2>Connection</h2>
+    <ul>
+      <ConnectionItem
+        v-for="connection in connections"
+        :key="connection.id"
+        :connection="connection"
+      />
+    </ul>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ConnectionItem from "@/components/profile/connectionList/ConnectionItem.vue";
+import { connections } from "@/utils/data/Data";
+</script>
 
 <style scoped>
 .connectionListContainer {

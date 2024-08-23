@@ -4,7 +4,6 @@
       <i class="bx bx-bar-chart-alt-2"></i>
       <h2>Activity Timeline</h2>
     </div>
-    <!-- desde aqui lo que pegue -->
     <ul>
       <TimeLineItem
         title="12 Invoices have been paid"
@@ -87,8 +86,6 @@ import { teams } from "@/utils/data/Data";
 .header i {
   font-size: 20px;
 }
-
-/* lo que pegue desde aqui */
 
 .pdfLink {
   width: fit-content;
