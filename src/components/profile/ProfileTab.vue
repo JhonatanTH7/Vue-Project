@@ -80,7 +80,7 @@ import { projects, connections, teams } from "@/utils/data/Data";
 }
 
 .leftSide {
-  width: 40%;
+  width: 30%;
 }
 
 .leftSide,
@@ -91,7 +91,7 @@ import { projects, connections, teams } from "@/utils/data/Data";
 }
 
 .rightSide {
-  width: 60%;
+  width: 70%;
 }
 
 .middleRightSection {
