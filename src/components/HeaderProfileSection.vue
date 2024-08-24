@@ -21,7 +21,7 @@
           </div>
         </section>
       </div>
-      <button class="purpleBGIconButton">
+      <button class="hoverablePurpleBGIconButton">
         <i class="bx bx-user-check"></i>
         Connected
       </button>
@@ -68,7 +68,7 @@ const disabledButtonsInfo = [
   display: flex;
   align-items: end;
   justify-content: space-between;
-  padding: 0 25px 25px 25px;
+  padding: 0 25px 1% 25px;
 }
 
 .bottomLeftSection {
@@ -81,7 +81,7 @@ const disabledButtonsInfo = [
 
 .profileAvatar {
   position: relative;
-  height: 120%;
+  height: 130%;
   aspect-ratio: 1.1 / 1;
 }
 

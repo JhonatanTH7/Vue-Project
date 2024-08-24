@@ -1,5 +1,5 @@
 <template>
-  <div class="activityTimelineContainer">
+  <section class="activityTimelineContainer">
     <div class="header">
       <i class="bx bx-bar-chart-alt-2"></i>
       <h2>Activity Timeline</h2>
@@ -55,7 +55,7 @@
         </template>
       </TimeLineItem>
     </ul>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

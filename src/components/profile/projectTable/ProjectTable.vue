@@ -53,7 +53,7 @@
             <div class="entriesPagination">
               <button><i class="bx bxs-chevrons-left"></i></button>
               <button><i class="bx bxs-chevron-left"></i></button>
-              <button class="purpleBGIconButton">1</button>
+              <button class="hoverablePurpleBGIconButton">1</button>
               <button>2</button>
               <button><i class="bx bxs-chevron-right"></i></button>
               <button><i class="bx bxs-chevrons-right"></i></button>

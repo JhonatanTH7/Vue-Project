@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <div class="profileTabContainer">
     <div class="leftSide">
       <SideProfileDetails />
       <SideProfileOverview />
@@ -12,7 +12,7 @@
       </div>
       <ProjectTable :projects="projects" />
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -26,7 +26,7 @@ import { projects } from "@/utils/data/Data";
 </script>
 
 <style scoped>
-section {
+.profileTabContainer {
   display: flex;
   height: min-content;
   width: 80%;
@@ -51,7 +51,7 @@ section {
 }
 
 .middleRightSection {
-  height: 260px;
+  height: 300px;
   width: 100%;
   display: flex;
   gap: 20px;

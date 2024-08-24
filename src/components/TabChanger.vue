@@ -1,10 +1,11 @@
 <template>
   <section>
     <button
-      :class="{
-        purpleBGIconButton: tab.name === actualTab,
-        hoverableNoBGButton: tab.name !== actualTab,
-      }"
+      :class="
+        tab.name === actualTab
+          ? 'hoverablePurpleBGIconButton'
+          : 'hoverableNoBGButton'
+      "
       @click="changeTab(tab.name)"
       v-for="tab in tabs"
       :key="tab.name"

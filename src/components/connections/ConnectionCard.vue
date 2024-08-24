@@ -36,7 +36,9 @@
     <div class="connectionInfo">
       <button
         :class="
-          connectionStatus ? 'purpleBGIconButton' : 'hoverableBGBIconButton'
+          connectionStatus
+            ? 'hoverablePurpleBGIconButton'
+            : 'hoverableBGIconButton'
         "
       >
         <i
