@@ -1,7 +1,7 @@
 export const getTechBGColor = (tech: string) => {
   switch (tech.toLowerCase()) {
     case "react":
-      return "#eb94ff";
+      return "#c6feff";
     case "mui":
       return "#c0e6ff";
     case "vuejs" || "vue":
@@ -9,9 +9,9 @@ export const getTechBGColor = (tech: string) => {
     case "developer":
       return "#f4bbbb";
     case "hubilo":
-      return "#a8f2d1";
+      return "#fbfbad";
     case "ui/ux" || "ux/ui":
-      return "#a8f2d1";
+      return "#adff9d";
     case "figma":
       return "#d0d0d0";
     case "html":
@@ -44,7 +44,7 @@ export const getTechBGColor = (tech: string) => {
 export const getTechTextColor = (tech: string) => {
   switch (tech.toLowerCase()) {
     case "react":
-      return "#80009d";
+      return "#00afb2";
     case "mui":
       return "#40a9ee";
     case "vuejs" || "vue":
@@ -52,9 +52,9 @@ export const getTechTextColor = (tech: string) => {
     case "developer":
       return "#ff0000";
     case "hubilo":
-      return "#0b9154";
+      return "#c9c917";
     case "ui/ux" || "ux/ui":
-      return "#0b9154";
+      return "#35c917";
     case "figma":
       return "#6c6c6c";
     case "html":
